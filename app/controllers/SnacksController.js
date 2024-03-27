@@ -7,7 +7,10 @@ export class SnacksController {
         console.log(`snacks page loaded`)
         this.drawSnacks()
 
+        AppState.on(`snacks`, this.drawSnacks)
         AppState.on(`money`, this.drawMoney)
+        AppState.on(`mySnacks`, this.drawMySnacks)
+
     }
 
     drawSnacks() {
@@ -16,6 +19,13 @@ export class SnacksController {
         snacks.forEach(snack => snacksHTML += snack.snackCard)
         console.log(snacksHTML)
         setHTML(`snack-cards`, snacksHTML)
+    }
+
+    drawMySnacks() {
+        let mySnacks = AppState.mySnacks
+        let mySnacksHTML = ``
+        mySnacks.forEach(snack => mySnacksHTML += snack.mySnackCard)
+        setHTML(`my-snacks`, mySnacksHTML)
     }
 
     drawMoney() {

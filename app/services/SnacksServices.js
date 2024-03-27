@@ -13,7 +13,10 @@ class SnacksService {
         console.log(selectedSnack)
         if (AppState.money >= selectedSnack.price) {
             console.log(`dispensing 1 ${selectedSnack.name}`)
+            selectedSnack.stock--
             AppState.money -= selectedSnack.price
+            AppState.mySnacks.unshift(selectedSnack)
+            // console.log(AppState.mySnacks)
         }
     }
 }
