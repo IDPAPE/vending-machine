@@ -1,1 +1,23 @@
 /* BASIC STYLES HERE */
+:root {
+    --tea-green: #C6EBBE;
+    --celadon: #A9DBB8;
+    --sky-blue: #7CA5B8;
+    --jet: #353535;
+}
+
+.bg-tea-green {
+    background-color: var(--tea-green);
+}
+
+.bg-celadon {
+    background-color: var(--celadon);
+}
+
+.bg-sky-blue {
+    background-color: var(--sky-blue);
+}
+
+.bg-jet {
+    background-color: var(--jet);
+}
